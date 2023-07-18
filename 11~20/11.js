@@ -39,6 +39,7 @@ const escapedString = "Hello, 'world!'"; // Hello, 'world!'와 같은 문자열
 
 // * 문자열과 다른 다른 데이터 타입을 더할 때, + 연산자를 사용하여 문자열 연결을 할 수 있다.
 
-const name = "Alice";
-const age = 30;
-const message = "My name is " + name + " and I am " + age + " years old.";
+const name = "박준형";
+const age = 29;
+const message =
+  "제 이름은 : " + name + " 그리고 내 나이는: " + age + " 입니다.";
