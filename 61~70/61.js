@@ -1,18 +1,25 @@
 // * static 키워드가 무엇인지 설명하고 예를 들어보세요.
 
 // static 키워드는 클래스의 정적(static) 메소드를 정의할 때 사용한다.
-// 정적 메소드는 클래스의 인스턴스를 생성하지 않아도 호출할 수 있다.
-// 정적 메소드는 클래스의 인스턴스에서 호출할 수 없다.
-// 정적 메소드는 클래스의 인스턴스에서 호출할 수 없기 때문에 클래스의 인스턴스에서 사용할 수 없는 필드를 정의할 때 사용한다.
+// 정적 메서드와 속성은 클래스의 인스턴스가 아닌 클래스 자체에 연결되며, 인스턴스를 생성하지 않고도 클래스 이름을 통해 직접 호출할 수 있다.
+// 정적 메서드와 속성은 인스턴스에서 직접 접근할 수 없고, 클래스 이름을 통해서만 접근할 수 있다.
 
-// 예를 들어, 다음과 같이 사용할 수 있습니다.
 class Article {
-  static publisher = 'imnotkrapli';
+  static publisher = "imnotkrapli";
+
   constructor(articleNumber) {
     this.articleNumber = articleNumber;
   }
 
+  // 정적 메서드
   static printPublisher() {
     console.log(Article.publisher);
   }
 }
+
+// 정적 메서드는 클래스 이름으로 호출
+Article.printPublisher(); // 출력: "imnotkrapli"
+
+// 인스턴스를 통한 호출 불가
+const myArticle = new Article(1);
+myArticle.printPublisher(); // 오류: printPublisher는 인스턴스에서 호출할 수 없음

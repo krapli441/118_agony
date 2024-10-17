@@ -17,3 +17,21 @@ const user = {
     [this.name, this.surname] = value.split(" ");
   },
 };
+
+class Calculator {
+  static add(x, y) {
+    // 정적 메서드
+    return x + y;
+  }
+  multiply(x, y) {
+    // 인스턴스 메서드
+    return x * y;
+  }
+}
+
+// 정적 메서드는 클래스 이름을 통해 호출
+console.log(Calculator.add(5, 3)); // 8
+
+// 인스턴스 메서드는 인스턴스를 생성하여 호출해야 함
+const calc = new Calculator();
+console.log(calc.multiply(5, 3)); // 15
