@@ -4,4 +4,4 @@ function defaultValueFunction(x, y = 1) {
   return x + y;
 }
 
-console.log(defaultValueFunction(1, 2)); // 3
+console.log(defaultValueFunction(5)); // 6
